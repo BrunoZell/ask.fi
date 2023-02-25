@@ -1,8 +1,8 @@
 This is our submission to the EthDevner '23 hackathon.
 
-Read the white paper [here](./whitpaper.md).
+Read the white paper [here](./whitpaper.md) [WIP].
 
-Read the specification [here](./specification.md).
+Read the specification [here](./specification.md) [WIP].
 
 Contact us here:
 
