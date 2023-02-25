@@ -1,6 +1,8 @@
 # SemanticSwap
 
-[Spec](/jl0DH9SbSMKZ1psr64cG-Q)
+- [SemaniticSwap Specification](./specification.md)
+- [Example user stories](./user-stories.md)
+- [Market making stories](./market-making.md)
 
 ## Exchange Structure
 
@@ -43,7 +45,7 @@ Anybody interested in the settlement of the signed `$deal` (typically `$serviceP
 
 ### Settlement
 
-(from https://docs.google.com/document/d/1p-FsH-BSqPugMnhGaP9jW_VVy219gkEiKJAxCErHIno/edit#heading=h.d1zk4dhq1xvi)
+(Todo: import from [here](https://docs.google.com/document/d/1p-FsH-BSqPugMnhGaP9jW_VVy219gkEiKJAxCErHIno/edit#heading=h.d1zk4dhq1xvi))
 
 The last phase of a deal is the final settlement. It takes observations of the external world as an input to measure value realization.
 
@@ -92,40 +94,6 @@ We don't expect all people to be able to straight out specify the values in the 
 While that format is technically required, there can be processes developed that autoamatically derive a value set for a user.
 
 While there is not a clear right or wrong on such value identidication processes, we propose a social network that optimizes for high-quality face2face spare time is a good way to capture most of the users day-to-day values. Users will get asked questions about how they want to spend their time, requiring the users to express what they want and don't want. Based on those responses, the system looks through all of SemanticSwaps offers that could be a value-add for the user, and looks at all their friends current asks, to propose different schedules or ideas on how to go about the day, week, month, year. Then the user swipes right or left depending on how they like it. And the more of those oppinions (and final historic value realization) are collected throghout the use of the social network.
-
-## User Stories
-
-### Crypto Asset Swap
-
-[To illustrate crypto market use case of cross-chain swaps; and standalone offers posted by market makers]
-
-Outline UI-flow of
-- ordering specific crypto assets (without ask, using a standalone offer)
-- from initial ask
-- to final settlement.
-
-Required domain models:
-- Consensus topology of referenced chains, to form consensus about onchain state (using HGTP and PRO)
-- 
-
-### Ride Sharing
-
-[To illustrate a real world use case that works in web2, but can be further enhanced by aggregation through market making. Showing how ma]
-
-Outline UI-flow of ordering a ride:
-- from initial ask
-- how market makers would query Uber, Lift, Bolt, or own riders and post (private) offers targeted to specifically that asker
-- through selection of offers by mapping the preferences of the user to all available offers
-- ordering one ride share by filling out the according order formular (by assigning constants to the offers variables)
-- wait for a signed deal (from the service providerm within the TTL)
-- through delivery (pickup)
-- to final settlement (service provider posts evidence of delivery; customer posts evidence of delivery failure; delta-settlement is executed according to terms specified in the $deal).
-
-### [maybe] Unique Physical Coin Swap
-
-[To illustrate the ability of expressing aritrary asks while keeping the architecture of SemanticSwap static]
-
-Put an ask to swap the DAG 98/100 coin for the DAG 99/100 coin
 
 ## Why Now
 
@@ -189,4 +157,3 @@ To bootstrap and kickstart the ecosystem, we picked a few domains where the effi
 
 - Fully describe how different world perspectives are kept track of. Explain the idea of assumed world state
 - Add the address to accept donations. And add the hint that donations will be compenstated accordingly in the genesis swap of SemanticSwap.
-
