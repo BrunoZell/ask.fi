@@ -1,6 +1,36 @@
 # SemanticSwap Specification
 
-## Value Set
+To understand how to read this, take [this brief explainer of IEML syntax](./ieml.md) as a reference.
+
+A paranode describing something that could happen, phrased so that a `#subject` is doing an `#action`. Inevitable, it will use concepts from a world model. It refers to the physical, immeasurable, objective truth triangulated by the world model. For this it's recommened to understand how IEML deals with referential semantics. You can read about it [here](https://intlekt.io/theoretical-principles/).
+
+```ieml
+#happening = (
+0: is doing
+#subject
+#action
+)
+
+@link
+	args:($A)
+	en:happening
+	template-en:$A indicates a position in relation to a horizontal axis
+	phraseWordInflection: ~noun 
+	
+	(
+	0 #to indicate the place,
+	1 #word <$A>,
+	2 #orientation or position in space,
+	6 *in #horizontal axis
+	).
+
+```
+
+```ieml
+#action = 
+```
+
+## Value Statement
 
 In reference to a (stateless) world model, specify arbitrary user defined values. As a sort-order function that orders all possible situations according to user-defined preferences.
 
@@ -9,15 +39,15 @@ type Preference = Better | Worse | Indifferent
 type Prefer<^WorldModel> = (a:WorldState, b:WorldState) -> Preference
 ```
 
+Those value statements can be used by market makers to come up with offers that precisely target user values, thus increasing service quality.
+
 ## Ask
 
 $ask = $asker wants (evidence of) $happening, where
 - $asker is: the participant requsting the $happening (and thus signing the message and is receiver of all offers pointing to that ask)
 - $happening is: a predicate on world observations, in reference to required domain models
 
-Todo: Put examples into previous ask scheme
-
-Example asks (_"I want something to get done"_):
+Example asks (_"I want #happening to happen"_):
 
 - (I want someone to) send 1 ETH to address 0x0 within 50 blocks after $deal.timestamp
   ```fsharp
