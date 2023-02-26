@@ -5,24 +5,14 @@ To understand how to read this, take [this brief explainer of IEML syntax](./iem
 A paranode describing something that could happen, phrased so that a `#subject` is doing an `#action`. Inevitable, it will use concepts from a world model. It refers to the physical, immeasurable, objective truth triangulated by the world model. For this it's recommened to understand how IEML deals with referential semantics. You can read about it [here](https://intlekt.io/theoretical-principles/).
 
 ```ieml
-#happening = (
-0: is doing
-#subject
-#action
-)
-
-@link
-	args:($A)
-	en:happening
-	template-en:$A indicates a position in relation to a horizontal axis
-	phraseWordInflection: ~noun 
-	
-	(
-	0 #to indicate the place,
-	1 #word <$A>,
-	2 #orientation or position in space,
-	6 *in #horizontal axis
-	).
+@paranode
+args:($Actor, $Action of #action)
+en:happening
+(
+0 ~verb #is doing,
+1 <$Actor>,
+2 <$Action>
+).
 
 ```
 
