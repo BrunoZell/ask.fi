@@ -6,19 +6,34 @@ A paranode describing something that could happen, phrased so that a `#subject` 
 
 ```ieml
 @paranode
-args:($Actor, $Action of #action)
-en:happening
+args: ($Actor, $Action of #action)
+en: happening
 (
 0 ~verb #is doing,
 1 <$Actor>,
 2 <$Action>
-).
-
+)
 ```
+
+An action describes a causal interaction that _could_ be done. The important constraint here that the subject _can decide_ on whether to do it or not. And depending on that decision, actually do it or not. And doing it results in causal effects on the world model. And that action must be in the future, although no requirements on when exactly it will take place are required. But can be specified in useful.
 
 ```ieml
-#action = 
+@paranode
+args: ($Process)
+en: action
+(
+0 ~noun $Process,
+1 <$Actor>,
+2 <$Action>
+5 #in the future
+)
 ```
+
+Link to concrete actions:
+
+- Driving a car towards a location
+- Sending Ethereum to a wallet address
+- Withdrawing Ethereum from an exchange to a wallet address
 
 ## Value Statement
 
@@ -61,7 +76,6 @@ Todo: Standalone vs situational
 
 Example offers (_"I can do something for you"_):
 
-- (I can) send 1 ETH to address 0x0
 - (I can) pick you up, at `$pickup=(address Moeckernbruecke)`, using `[ref:MyCar]`, in 18±3 minutes, to then drive you to `$destination`, with an ETA of: `estimateTravelTime($pickup, $destination)`.
   With order form of:
   `$destination <: #address in Tempelhofer feld-area`

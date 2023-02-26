@@ -34,6 +34,21 @@ In practice, there probably will be different market maker organizations focussi
 
 ### Crpyot asset spot delivery [via centralized exchange withdrawal]
 
+#### Offers
+
+(I can) send 1 ETH to address 0x0
+
+```ieml
+@paranode
+args: ($Asset, $Amount $Recipient)
+en: action
+(
+0 ~verb #send,
+2 #number <$Amount> <$Asset>
+3 #address <$Recipient>
+)
+```
+
 Required domain models:
 
 - Prooving TLS sessions for withdrawals of well-known exchanges

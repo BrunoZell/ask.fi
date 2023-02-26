@@ -76,6 +76,8 @@ en:paradigm of symptoms related to cognition
 
 ## Links
 
+I think of a linke as an open interface which all types of the paradigm of the arguments are valid inputs.
+
 @link
 
 @function 
