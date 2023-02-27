@@ -1,6 +1,6 @@
 # SemanticHack
 
-Read our submission to the EthDevner '23 hackathon [here](./whitpaper.md).
+Read our submission to the EthDevner '23 hackathon [here](./submission.md).
 
 Read the emerging SemanticSwap white paper [here](./whitpaper.md) [WIP].
 
