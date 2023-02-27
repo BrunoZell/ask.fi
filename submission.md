@@ -28,47 +28,32 @@ For our _SemanticHack_ coordination scheme, we focus on follwing value propositi
 - Easily find people to have lunch, dinner, drinks with
 - Ride sharing to get around the city and hop between event locations and hack houses
 
-## Coordination Elements
+## Focus: Matchmake teammates
 
-### Provide food and drinks for all hackers
+Ask:
 
-"I'm hungy {now| in about x hours}"
-
-Hackers give their estimation so the service provider can order food at the right moment. And the right amount of food.
-
-Before ordering, service provider sends offers to all hackers about what to order and how much.
-
-Job: Periodically order food
-
-### Matchmake teammates
-
-Ask: "My project needs
-A -=-
-B"
-
-Offer: "I can do
+```ieml
+"My project needs
 A: Software Development in {Solidity, Vyper, JavaScript, Rust, Scala, F#, [freetext]}
 B: UI/UX development with {Figma, Adobe sth, MS Paint}
 C: Project management
 D: {Interested|Proficient|Expert} in {zero knowledge, fully homomorphic, IEML, HGTP, Ethereum, Solana, IPFS}"
+
+Offer:
+
+```ieml
+"I can do
+A: Software Development in {Solidity, Vyper, JavaScript, Rust, Scala, F#, [freetext]}
+B: UI/UX development with {Figma, Adobe sth, MS Paint}
+C: Project management
+D: {Interested|Proficient|Expert} in {zero knowledge, fully homomorphic, IEML, HGTP, Ethereum, Solana, IPFS}"
+```
 
 Market maker: Sends virtual offers to "My project needs" asks based on similar "I can do" asks.
 
 Jobs:
 - Look through all asks and offers and matchmake. Increasingly categorizing offers to automate matchmaking.
 - Maintain list of definitions of technologies. By building an ontology. They just propose it and people are free to use whatever. What should emerge are the most useful defintions (altough they might not be exactly correct).
-
-### Initiate brainstorming sessions to generate project ideas
-
-Ask: "I"m down to brainstorm at {location} [about {topic}] [time {now | in x hours}]"
-
-### Match hackers with open questions to conference atendees with answers
-
-Ask: "I have a question regarding {topic}"
-
-### Provide internet for all hackers
-
-Ask: "I need internet while hacking at the BUIDL HUB"
 
 ## Example Hacker
 
