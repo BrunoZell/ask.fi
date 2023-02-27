@@ -1,8 +1,10 @@
-This is our submission to the EthDevner '23 hackathon.
+# SemanticHack
 
-Read the white paper [here](./whitpaper.md) [WIP].
+Read our submission to the EthDevner '23 hackathon [here](./whitpaper.md).
 
-Read the specification [here](./specification.md) [WIP].
+Read the emerging SemanticSwap white paper [here](./whitpaper.md) [WIP].
+
+Read the SemanticSwap specification [here](./specification.md) [WIP].
 
 Contact us here:
 
