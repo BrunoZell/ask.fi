@@ -134,3 +134,63 @@ Only when the $deal.offer.serviceDescription evaluates to 'FailedDelivery' on an
 When settlement is initiated, according corrective actions will be initiated according to the responsibilities defined in the $deal.
 
 Todo: Specifiy how responsibilities are defined and analyed and how these corrective actions are executed and how they will be a good thing.
+
+```fsharp
+/// hgt in [ontology in IEML]
+type Perspective = {
+  // member functions are availale semantic queries from a Situation<^Perspective>
+  // referenced types on those functions are implicitly public domain model types.
+  // In the implementation of these member functions, analyze all references to Perception-types (analyze all possible calls to strongly-typed observations from WorldEventStream/WorldState.latest, since, during ect..)
+}
+
+type Query<^Perspective, 'Query, 'Result> = 'Query -> Situation<^Perspective> -> 'Result
+
+
+type ActionTrigger =
+  | Query of Query
+  | Composition of Query list
+
+type Decision =
+  | Inaction
+  | Initiate of Action
+
+type Situation<^Perspective> = // position in Agents WorldEventStream
+
+/// Instantiated every time an agent decides to initiate an action. Used to reflect on actions even if no causal effects are observed yet.
+type ActionInitiation = {
+  Trigger: AgentReflection * Situation<^Perspective> // Todo: Merge ActionReflection into the Situation. And just have well-defined queries for the action domain?
+  Action: ActionSet
+}
+
+/// The history of all initiated actions of the agent. To reflect on decisions made, because it may not be evident from available observations in the latest Situation
+type AgentReflection = ActionInitiation list
+
+/// A function that maps any given situation an agent can be in to a decision, from his Perspective (WorldStateOntology).
+type Plan = (AgentReflection, Situation<^Perspective>) -> Decision
+// Todo: Write F# analyzer that extracts references to Perspective-queries and the logic between them and the construction of the action into a semantically interoperable model. Or at least generate:
+// - the list of domain-queries used
+// - the list of actions that can *possibly* be initiated
+//    -> vnext: constrain to a subtype of those actions, by backtracing the decision function similar to typescripts type checker
+// - the list of actions the decision can *possibly* reflect on.
+
+
+// Probes an agents observations 
+type ActionTriggerProbe<^Perspective> = (Situation<^Perspective>) -> ActionIntiation option // Only references queries and concepts from a perspective
+
+type AlternativePlanProposal = {
+  Proposer: AgentId
+  Proposal: subject:AgentId * alternative:Plan
+}
+
+/// Sent in response to `AlternativePlanProposal` when Proposal.subject == $me
+/// Evaluation process is outsourced to the agent so it reflects his true values because there are no constraints on that decision.
+type Evaluation = Accept | Reject
+
+type AlternativeProposalResponse = AlternativePlanProposal * Evaluation
+
+let expectedAction = (Situation<^Perspective>, ProposedAction: Action, Probe: Query<^Perspective, Evaluation>) -> Possible | Impossible
+// Probes are basically the agents values to probe for. Basicalt
+// "I can do $action" where $action is constrained via Lattice (Cue). Like "I can send an ETH-Transfer that expectedly succeeds up to my balance of 1 ETH, minus whatever gas costs I'd have to pay.
+
+```
+  
