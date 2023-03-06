@@ -45,3 +45,13 @@ type User = {
     
     /// User declares a new value set
     member Declare(value: ValueSet)
+
+type UserStateSnapshot = {
+    Values: ValueSet
+    Commitments: Commitment list
+    Situation: Situation
+}
+
+type NetworkStateSnapshot = {
+    Users: Map<DagAddress, UserStateSnapshot>
+}
