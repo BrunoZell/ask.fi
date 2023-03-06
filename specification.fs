@@ -1,7 +1,5 @@
 module AskFi
 
-type User = DagAddress
-
 type Commitment = {
     Action: unit
     Trigger: unit // Todo: predicate on HGTP state snaphot
