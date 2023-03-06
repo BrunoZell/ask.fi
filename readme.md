@@ -1,6 +1,8 @@
 # Ask Finance
 
-Read the specification [here](./specification.md).
+Read the specification in english [here](./specification.md).
+Read the specification in F# [here](./specification.fs).
+Read the specification in IEML [here](./specification.ieml).
 
 Contact us here:
 
