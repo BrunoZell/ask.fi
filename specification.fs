@@ -1,8 +1,14 @@
 module AskFi
 
+type Decision = Action | Inaction
+
+/// Translates into IEML phrase "$user do $action when $trigger matches $user.perspective"
 type Commitment = {
+    /// Arbitrary IEML verb-phrase, with related user as subject.
     Action: unit
-    Trigger: unit // Todo: predicate on HGTP state snaphot
+
+    // Predicate on users perspective
+    Trigger: (UserReflection, WorldState) -> Decision
 }
 
 type ChangeOfPlan = {
