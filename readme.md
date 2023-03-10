@@ -19,7 +19,7 @@ It's recommended to read the specification in the following order. While english
 
 ## Build ⚒️
 
-If you want to help out in any way, contact us here:
+If you want to help out in any way, take a look at [the open issues](/issues) or contact us here:
 
 - Telegram: [@extremecookie](https://telegram.me/extremecookie)
 - Twitter: [@BrunoZell](https://twitter.com/BrunoZell)
