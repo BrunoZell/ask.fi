@@ -9,7 +9,7 @@ Users follow these guiding principles:
 1. _"Do whatever you want, as long as everybody is fine with it"_
 2. _"Feel free to ask, but don't expect an answer"_
 
-While these principles seem very basic and have surely been around for a while, the critical difference now is that we can implement computing infrastructure that help us living by these principles.
+While these principles seem very basic and have surely been around for a while. The critical difference now is that we can implement computing infrastructure that help us living by these principles.
 
 The system is a structured conversation, a protocol. While the overall structure is kept very simple, it is designed to accomodate arbitrary perspectives and arbitrary values. So the core protool can cope with a radically changing world ad will never have to change.
 
@@ -17,31 +17,24 @@ User-defined concepts in the conversation are expressed in [IEML (Information Ec
 
 To verify the conversation, valid sequences of messages are encoded as a state channel on [HGTP (Hypergraph Transfer Protocol)](https://docs.constellationnetwork.io/core-concepts/). Due to it's great flexibility, it's possible to encode user-defined validation rules for everything that is not part of the core protocol but still essential for successful coordination.
 
-## Messages
+## Users
 
-### `change-of-plan`
+New users are identified by their DAG-address. The underlying key is used to sign messages authored by them.
 
-- References the users previous `change-of-plan`
-- List of `commitment` added to the users canonical plan
-- List of `commitment` in users previous canonical plan to be removed from it
+### Messages
 
-### `commitment`
+There are just three predefined messages each user can sign and submit. These are:
 
-- IEML phrase "I do $action if I observe $trigger"
-where $trigger is a predicate on HGTP state snapshots,
-and $action is an arbitrary expression of the plan.
-- proof validation: specifies how the user can proof an actions execution.
+- `Commit`: commiting to an updated personal coordination plan
+- `Propose`: proposing changes to the coordination plan of another user
+- `Declare`: adjusting the users values which are used by market makers to steer the optimization process towards the disired coordination plans
 
-### `proposal`
+Those messages are serialized, signed, and sent to the global L0 network. This includes them into the AskFi state channel and are used to coordinate.
 
-- Recipient (addres who's plan is to be changed)
-- `change-of-plan` (the alternative)
+### State Snapshot
 
-Proposals tend to come with commitments on whether that proposal is accepted by the recipient or not, to then further build coordination schemes around it.
+By aggregating all messages of a user, the users state snapshot is derived. It consists of:
 
-### `ask`
-
-| IEML phrase "I like to observe $predicate" + invalidation condition
-| IEML phrase "I don't like to observe $predicate" + invalidation condition
-
-Asks help market makers to find high quality proposals, and enable automatic negotiations.
+- `Commitments`: All currently commited conditional actions of this user
+- `Values`: The users latest declared value set
+- `Situation`: The users latest perception of the world used to evaluate triggers of active commitments. This includes proofs of initiated actions or received proposals for alternative coordination.
