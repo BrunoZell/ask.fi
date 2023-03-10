@@ -6,8 +6,8 @@ Ask Finance defines a conversational structure as an alternative solution to soc
 
 There are two ways to contribute right now. Whatever you choose, there's a good chance that you will be more than paid back.
 
-1. [Donate crypto assets](#build-%EF%B8%8F)
-2. [Help out building this](#donate-)
+1. [Donate crypto assets](#donate-)
+2. [Help out building this](#build-%EF%B8%8F)
 
 ## Specification 🧠
 
