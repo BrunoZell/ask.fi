@@ -15,7 +15,7 @@ It's recommended to read the specification in the following order. While english
 
 - Read the specification in english [here](./specification.md).
 - Read the specification in F# [here](./specification.fs).
-- Read the specification in IEML [here](./specification.ieml).
+- Read the specification in IEML [here](./specification-ieml.md).
 
 ## Build ⚒️
 
