@@ -2,6 +2,8 @@
 
 Ask Finance defines a conversational structure as an alternative solution to social coordination. We expect this to be more efficient, effective, and humane than money or every other political system humanity tried out yet.
 
+However, the efficiency gain only shines through once the network has a larger user base. Until then, the code can be used to run trading bots. If you want to do that, get familiar with the [AskFi SDK](https://github.com/BrunoZell/AskFi.Sdk) and [AskFi Runtime](https://github.com/BrunoZell/AskFi.Runtime).
+
 ## Contribute 🪴
 
 There are two ways to contribute right now. Whatever you choose, there's a good chance that you will be more than paid back.
