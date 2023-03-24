@@ -11,7 +11,7 @@ Users follow these guiding principles:
 
 While these principles seem very basic and have surely been around for a while. The critical difference now is that we can implement computing infrastructure that help us living by these principles.
 
-The system is a structured conversation, a protocol. While the overall structure is kept very simple, it is designed to accomodate arbitrary perspectives and arbitrary values. So the core protool can cope with a radically changing world ad will never have to change.
+The system is a structured conversation, a protocol. While the overall structure is kept very simple, it is designed to accomodate arbitrary perspectives and arbitrary values. So the core protocol can cope with a radically changing world and will never have to change.
 
 User-defined concepts in the conversation are expressed in [IEML (Information Economy MetaLanguage)](https://intlekt.io/ieml). This allows arbitrary concepts to be communicated without syncing up on them upfront, enabling _true_ counterparty discovery.
 
