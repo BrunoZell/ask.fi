@@ -29,12 +29,4 @@ If you want to help out in any way, take a look at [the open issues](https://git
 
 ## Donate 💸
 
-If you want this to be built, feel free to gift our contributors a basic salary:
-
-`arb1:0xa0441F070Ea4A72a23ea5F832eCA6AC345aba8aA`
-
-It's a Safe on Arbitrum Mainnet.
-
-If you want to get added to the multisig, just ask.
-
-Gifts can come in any size. The act of donating is more important than the relative size of donations. Make sure to keep your private key you donated with!
+If you want this to be built, feel free to gift our contributors a basic salary. Instructions will follow.
